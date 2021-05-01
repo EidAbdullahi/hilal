@@ -1,0 +1,44 @@
+{% extends 'all/base.html' %} {% load static%} {% load bootstrap4 %} {% load ratings %}
+
+{% block content %}
+{{block.super}}
+
+<div class="container-fluid" style="margin-bottom: 10px;  padding-left:55px; padding-right:55px; font-family: 'Grenze Gotisch', cursive;">
+    <h1 style="font-family: 'Aclonica', sans-serif; text-align: center; font-weight: bolder;">PROJECTS</h1>
+    <div class="row">
+
+        {% for post in projects %}
+
+        <div class="col-md-4" style="margin-bottom:25px;">
+            <div class="card" style="height:870;">
+                <div class="card-header">
+                    <h2 style="font-weight:bold;" class="text-center"><strong> {{post.title}}</strong></h2>
+                </div>
+                <div class="card-body">
+                    <img class="card-img-top" src="{{post.image.url}}" alt="{{post.title}}" height="300px"
+                        width="300px">
+                    <p style="font-weight:lighter;" class="text-center"><strong>{{post.description}}</strong> </p>
+                    <p><i><strong>Technologies used:</strong>{{post.technologies}}</i></p>
+                    <p> {% ratings post %} </p>
+                    <p><strong>Posted on: </strong> {{post.post_date|date:"d/m/Y"}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted ml-2"><img src="{{ post.user.profile.image.url }}" alt=""
+                        class="rounded-circle img-fluid mr-1" style="width: 30px;">
+                    <strong>posted By: {{post.user|upper}}</strong></small>
+                    <span>
+                    <button class="btn"
+                        style=" border-radius: 5em; background-color: #49c5b6; border:none; padding: 2px; height:40px; width: 150px; float: right;"><a
+                            target="_blank" style="color: white; text-decoration:none;"
+                            href="{{post.link}}"><strong>View
+                                Project</strong></a></button></span>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% load bootstrap4 %} {% load static %}
+
+<! DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% if title %}
+        <title> {{title}} </title>
+        {% else %}
+        <title>Awwards</title>
+        {% endif %}
+
+        {{ form.media }}
+
+        {% block styles %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="{% static '/css/base.css' %}">
+        {% endblock %}
+    </head>
+
+    <body>
+        {% include "all/navbar.html" %}
+        <div class="jumbotron jumbotron-fluid"
+            style="background-image: url(/static/img/1.png); width:100%; height:400px" id="topImg">
+            <div class="container" style="color: black;">
+                <div class="row">
+                    <div class="col-md-4" style="font-weight: 700; padding-top: 10%;">
+                        <a style='border-radius: 50px; font-size: large;' target="_blank"
+                            href="https://gramapp-ruiru.herokuapp.com">Site of the day</a>
+                        <small class="text" style="font-size: large;">1st May 2021</small>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div style="float: right; margin-top: 5%; margin-right: 5%; font-weight: bolder;">
+                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
+                                href="/">Likes</a>
+                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
+                                href="/">collect</a>
+                        </div>
+                        <div class="title" style="font-size:x-large; padding-top: 20%;">
+                            <cite>Witness to History..</cite>
+                            <h2 style="font-style: italic;">By<strong> Hilal, Organization</strong> From Kismayo,Somalia</h2>
+                        </div>
+                    </div>
+                    <div class="'col-md-12">
+                        <div class=""
+                            style="position: absolute; top: 30%; left: 10%; margin-top: 5%;font-weight: bolder;">
+                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
+                                target="_blank" href="https://en.wikipedia.org/wiki/Award">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% block content%}
+
+
+        {% endblock %}
+
+        {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        {% bootstrap_javascript %}
+        {% endblock %}
+    </body>
+
+    </html>
