@@ -1,8 +1,8 @@
-# **AWWARDS** 
+# **HILAL** 
 
 ### **Author** :bowtie:
 
-*Ruiru, Erastus*
+*EID, ABDULLAHI*
 
 ### **Description**
 
@@ -41,9 +41,6 @@ A user can:
 
 ### **Setup Installation**
 
-- Clone or download and unzip the repository from github *https://github.com/erastus-1/Awwards.git*
-
-- You can use this command *(git clone https://github.com/erastus-1/Awwards.git)*, to clone the project to your machine if you have git .
 
 - Install all the requirements using this command:
 
@@ -63,10 +60,10 @@ Youtube
 
 Want to contribute? Kindly reach out via email:
 
-*erastuskariuki15@gmail.com*
+*eidabdullahi10@gmail.com*
 
 ### **License**
 
 License: MIT
 
-*© Ruiru, Erastus*
+*© Eid, Abdullahi*
