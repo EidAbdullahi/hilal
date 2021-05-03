@@ -14,7 +14,7 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-import django_heroku
+
 import dj_database_url
 
 from pathlib import Path
@@ -96,16 +96,16 @@ WSGI_APPLICATION = 'award.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database',
+        'NAME': 'hilal',
         'USER': 'eid',
     'PASSWORD':'eid12345',
     }
 }
 
 cloudinary.config(   
-  cloud_name = 'dna4zvvgn',
-  api_key = '189771367633795',
-  api_secret = '0ZHoI9TJhb2rK_R1dT0q8FmCeWo', 
+  cloud_name = 'duwcyaitg',
+  api_key = '845663342138117',
+  api_secret = 'BPb5u0vZfuqvk0ZKWSJgTlLDhPg', 
 
 )
 # Password validation
@@ -153,4 +153,3 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-django_heroku.settings(locals())
