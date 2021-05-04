@@ -44,7 +44,7 @@ class Projects(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     image = CloudinaryField('image', blank=True, null=False)
     title = models.CharField(max_length=200)
-    description = HTMLField(blank=True)
+    description = models.TextField(blank=True)
     link = models.URLField(max_length=70)
     post_date = models.DateTimeField(default=timezone.now)
     technologies = models.CharField(max_length=100)
