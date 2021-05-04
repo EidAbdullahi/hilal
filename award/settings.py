@@ -37,7 +37,7 @@ SECRET_KEY =('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # .....?
 # ......
@@ -65,6 +65,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     )
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
