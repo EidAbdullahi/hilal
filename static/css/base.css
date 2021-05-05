@@ -3,4 +3,19 @@
     width:max-content; 
     height:400px
 }
-
+@media screen {
+    body {
+      width: 75%;
+    }
+  }
+  
+  @media print {
+    body {
+      width: 100%;
+    }
+  }
+  @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+    body {
+      background: #ccc;
+    }
+  }
