@@ -11,14 +11,13 @@
         {% for post in projects %}
 
         <div class="col-md-4" style="max-width:100%;height:auto;">
-            <div class="card" style="height:870;">
+            <div class="card" style="max-width:100%;height:auto;">
                 <div class="card-header">
-                    <h2 style="font-weight:bold;" class="text-center"><strong> {{post.title}}</strong></h2>
+                    <h2 style="font-weight:bold;"><strong> {{post.title}}</strong></h2>
                 </div>
                 <div class="card-body">
-                    <img class="card-img-top" src="{{post.image.url}}" alt="{{post.title}}" height="300px"
-                        width="300px">
-                    <p style="font-family:courier,arial,helvetica;" class="text-center"><strong>{{post.description}}</strong> </p>
+                    <img class="card-img-top" src="{{post.image.url}}" alt="{{post.title}}">
+                    <p style="font-family:courier,arial,helvetica;"><strong>{{post.description}}</strong> </p>
                     <p><i><strong>Technologies used:</strong>{{post.technologies}}</i></p>
                     <p> {% ratings post %} </p>
                     <p><strong>Posted on: </strong> {{post.post_date|date:"d/m/Y"}}</p>
