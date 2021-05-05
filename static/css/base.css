@@ -92,7 +92,7 @@
     #visit {
     width: 14%;
     height: 280px;
-    position: relative;
+    /* position: relative; */
     top: -515px;
     left: 42%
     }

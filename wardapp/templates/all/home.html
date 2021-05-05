@@ -3,7 +3,8 @@
 {% block content %}
 {{block.super}}
 
-<div class="container-fluid" style="margin-bottom: 10px;  padding-left:55px; padding-right:55px; font-family: 'Grenze Gotisch', cursive;">
+<div class="container-fluid"
+    style="margin-bottom: 10px;  padding-left:55px; padding-right:55px; font-family: 'Grenze Gotisch', cursive;">
     <h1 style="font-family: 'Aclonica', sans-serif; text-align: center; font-weight: bolder;">PROJECTS</h1>
     <div class="row">
 
@@ -24,14 +25,14 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted ml-2"><img src="{{ post.user.profile.image.url }}" alt=""
-                        class="rounded-circle img-fluid mr-1" style="width: 30px;">
-                    <strong>posted By: {{post.user|upper}}</strong></small>
+                            class="rounded-circle img-fluid mr-1" style="width: 30px;">
+                        <strong>posted By: {{post.user|upper}}</strong></small>
                     <span>
-                    <button class="btn"
-                        style=" border-radius: 5em; background-color: #49c5b6; border:none; padding: 2px; height:40px; width: 150px; float: right;"><a
-                            target="_blank" style="color: white; text-decoration:none;"
-                            href="{{post.link}}"><strong>View
-                                Project</strong></a></button></span>
+                        <button class="btn"
+                            style=" border-radius: 5em; background-color: #49c5b6; border:none; padding: 2px; height:40px; width: 150px; float: right;"><a
+                                target="_blank" style="color: white; text-decoration:none;"
+                                href="{{post.link}}"><strong>View
+                                    Project</strong></a></button></span>
                 </div>
             </div>
 
@@ -39,26 +40,26 @@
         {% endfor %}
     </div>
 </div>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <div id="container" style="max-width:100%;height:auto;">
-  <div id="part1">
-      <div id="companyinfo"> <a id="sitelink" href="#">HILAL</a>
-          <p id="detail">We create awesome space for Humanity to all people with special needs in Somalia . </p>
-      </div>
-      
-      <div id="visit">
-          <p id="txt2">Visit</p>
-          <p class="text">Kismayo </p>
-          <p class="text">Argo-Road </p>
-          <p class="text">Somalia </p>
-          <p class="text">Phone: +252611573500 </p>
-          <p class="text">Email:hilalrdogi@gmail.com</p>
-      </div>
-  </div>
-  <div id="part2">
-      <p id="txt6"><i class="material-icons tiny"></i>copyright 2021 Eid Abdullahi - All right reserved</p>
-  </div>
+    <div id="part1">
+        <div id="companyinfo"> <a id="sitelink" href="#">HILAL</a>
+            <p id="detail">We create awesome space for Humanity to all people with special needs in Somalia . </p>
+        </div>
+
+        <div id="visit">
+            <p id="txt2">Visit</p>
+            <p class="text">Kismayo </p>
+            <p class="text">Argo-Road </p>
+            <p class="text">Somalia </p>
+            <p class="text">Phone: +252611573500 </p>
+            <p class="text">Email:hilalrdogi@gmail.com</p>
+        </div>
+    </div>
+    <div id="part2">
+        <p id="txt6"><i class="material-icons tiny"></i>copyright 2021 Eid Abdullahi - All right reserved</p>
+    </div>
 </div>
 
 
