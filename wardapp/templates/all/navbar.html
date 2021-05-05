@@ -1,12 +1,16 @@
+{% load static %}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand mr-6" style="font-family: 'Pacifico', cursive; font-size:30px;" href="/">HIRDO</a>
+    <a class="navbar-brand mr-6" style="font-family: 'Pacifico', cursive; font-size:30px;" href="/">Hilal Relief Development 
+    Organization</a>
+    <img src="/static/img/logo.jpg"  style="max-width:100%;height:auto;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarToggle" style="font-family: 'Pacifico', cursive; font-size:30px;">
-    <img src="/static/img/logo.jpg"  style="max-width:100%;height:auto;">
+      <a class="" href="/"><i class="fa fa-trophy" style="font-size:36px; color: black;"></i></a>
     </div>
     <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}">
       <input style="border-radius: 70px;" class="form-control mr-sm-2" type="search" name="username"
@@ -27,9 +31,7 @@
         <hr>
         <li>
           <a style="color: black;" class="nav-item nav-link" href="{% url 'logout' %}?next={% url 'login' %}">Logout</a>
-          {% else %}
-          <a style="color: black;" class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-          {% endif %}
+         
         </li>
       </ul>
     </div>
