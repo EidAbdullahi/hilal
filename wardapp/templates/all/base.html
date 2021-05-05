@@ -1,90 +1,97 @@
 {% load bootstrap4 %} {% load static %}
 
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% if title %}
-        <title> {{title}} </title>
-        {% else %}
-        <title>Awwards</title>
-        {% endif %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+    <title> {{title}} </title>
+    {% else %}
+    <title>Awwards</title>
+    {% endif %}
 
-        {{ form.media }}
+    {{ form.media }}
 
-        {% block styles %}
-        {% bootstrap_css %}
-        <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-        <link rel="stylesheet" href="{% static '/css/base.css' %}">
-        
-        {% endblock %}
-    </head>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
 
-    <body>
-        {% include "all/navbar.html" %}
-        <div class="jumbotron jumbotron-fluid"
-            style="background-image: url(/static/img/1.png); width:100%; height:400px" id="topImg">
-            <div class="container" style="color: black;">
-                <div class="row">
-                    <div class="col-md-4" style="font-weight: 700; padding-top: 10%;">
-                        <a style='border-radius: 50px; font-size: large;' target="_blank"
-                            href="">Site of the day</a>
-                        <small class="text" style="font-size: large;">1st May 2021</small>
+    {% endblock %}
+</head>
+
+<body>
+    {% include "all/navbar.html" %}
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(/static/img/1.png); width:100%; height:400px"
+        id="topImg">
+        <div class="container" style="color: black;">
+            <div class="row">
+                <div class="col-md-4" style="font-weight: 700; padding-top: 10%;">
+                    <a style='border-radius: 50px; font-size: large;' target="_blank" href="">Site of the day</a>
+                    <small class="text" style="font-size: large;">1st May 2021</small>
+                </div>
+
+                <div class="col-md-8">
+                    <div style="float: right; margin-top: 5%; margin-right: 5%; font-weight: bolder;">
+                        <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
+                            href="/">Likes</a>
+                        <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
+                            href="/">collect</a>
                     </div>
-
-                    <div class="col-md-8">
-                        <div style="float: right; margin-top: 5%; margin-right: 5%; font-weight: bolder;">
-                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
-                                href="/">Likes</a>
-                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
-                                href="/">collect</a>
-                        </div>
-                        <div class="title" style="font-size:large; padding-top: 0%;">
-                            <cite style="color: rgb(239, 240, 243);
+                    <div class="title" style="font-size:large; padding-top: 0%;">
+                        <cite style="color: rgb(239, 240, 243);
                             background-color:#e713e7  ;
                             "> Witness to History.. </cite>
-                            <h3 style="font-style:helvetica,sans-serif; background-color:white; color: rgb(6, 7, 7);"> 
-                                HIRDO is non-governmental and non-profit organization. 
-                                It was established by a group of talented Somali
-                                professional and intellectuals on 16th July 2007 to address  and overcome the problems of poverty, 
-                                famine, disease, livelihood improvement, injustice, illiteracy, gender balance,
-                                HIV/AIDS awareness rising and war. 
-                                HIRDO is registered in both Jubbaland and Federal 
-                                ministries of interior & national security as a non-governmental 
-                                and non-profit Organization.</h3>
-                        </div>
+                        <h3 style="font-style:helvetica,sans-serif; background-color:white; color: rgb(6, 7, 7);">
+                            HIRDO is non-governmental and non-profit organization.
+                            It was established by a group of talented Somali
+                            professional and intellectuals on 16th July 2007 to address and overcome the problems of
+                            poverty,
+                            famine, disease, livelihood improvement, injustice, illiteracy, gender balance,
+                            HIV/AIDS awareness rising and war.
+                            HIRDO is registered in both Jubbaland and Federal
+                            ministries of interior & national security as a non-governmental
+                            and non-profit Organization.</h3>
                     </div>
-                    <div class="'col-md-12">
-                        <div class=""
-                            style="position: absolute; top: 30%; left: 10%; margin-top: 5%;font-weight: bolder;">
-                            <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark"
-                                target="_blank" href="https://en.wikipedia.org/wiki/Award">Visit</a>
-                        </div>
+                </div>
+                <div class="'col-md-12">
+                    <div class="" style="position: absolute; top: 30%; left: 10%; margin-top: 5%;font-weight: bolder;">
+                        <a style="border-radius: 50%; border-width: 2px;" class="btn btn-outline-dark" target="_blank"
+                            href="https://en.wikipedia.org/wiki/Award">Visit</a>
                     </div>
                 </div>
             </div>
         </div>
-
-       
-        {% block content%}
+    </div>
 
 
-        {% endblock %}
+    {% block content%}
 
-        {% block scripts %}
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        {% bootstrap_javascript %}
-        {% endblock %}
-    </body>
 
-    </html>
+    {% endblock %}
+
+    {% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+
+</html>
